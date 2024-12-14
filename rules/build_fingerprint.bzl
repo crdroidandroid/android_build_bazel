@@ -29,7 +29,7 @@ def _build_fingerprint_impl(ctx):
     if not default_app_certificate or default_app_certificate == "build/make/target/product/security/testkey":
         build_version_tags = build_version_tags + ["test-keys"]
     else:
-        build_version_tags = build_version_tags + ["dev-keys"]
+        build_version_tags = build_version_tags + ["release-keys"]
     build_version_tags = sorted(build_version_tags)
 
     build_fingerprint_blank = "%s/%s/%s:%s/%s/%s:%s/%s" % (
